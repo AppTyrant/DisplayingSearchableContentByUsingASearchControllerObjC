@@ -10,17 +10,17 @@
 
 @interface Product : NSObject <NSSecureCoding>
 
--(instancetype)initWithTitle:(NSString*)title
-              yearIntroduced:(NSInteger)yearIntroduced
-                  introPrice:(double)introPrice NS_DESIGNATED_INITIALIZER;
+-(nonnull instancetype)initWithTitle:(nonnull NSString*)title
+                      yearIntroduced:(NSInteger)yearIntroduced
+                          introPrice:(double)introPrice NS_DESIGNATED_INITIALIZER;
 
--(instancetype)initWithCoder:(NSCoder*)aDecoder NS_DESIGNATED_INITIALIZER;
+-(nonnull instancetype)initWithCoder:(nonnull NSCoder*)aDecoder NS_DESIGNATED_INITIALIZER;
 
-@property (nonatomic,strong) NSString *title;
-@property (nonatomic) NSInteger yearIntroduced;
-@property (nonatomic) double introPrice;
+@property (nonnull,nonatomic,strong,readonly) NSString *title;
+@property (nonatomic,readonly) NSInteger yearIntroduced;
+@property (nonatomic,readonly) double introPrice;
 
--(instancetype)init NS_UNAVAILABLE;
+-(nonnull instancetype)init NS_UNAVAILABLE;
 
 @end
 
