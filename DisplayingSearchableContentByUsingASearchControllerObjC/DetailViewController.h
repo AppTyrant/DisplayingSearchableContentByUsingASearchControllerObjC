@@ -11,9 +11,9 @@
 
 @interface DetailViewController : UIViewController
 
-+(DetailViewController*)detailViewControllerForProduct:(Product*)product;
++(nonnull DetailViewController*)detailViewControllerForProduct:(nonnull Product*)product;
 
-@property (nonatomic,strong) Product *product;
+@property (nonnull,nonatomic,strong) Product *product;
 
 @end
 
