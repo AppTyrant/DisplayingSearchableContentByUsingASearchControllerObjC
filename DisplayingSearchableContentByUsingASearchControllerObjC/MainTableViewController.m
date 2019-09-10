@@ -280,36 +280,6 @@
     self.resultsTableController.filteredProducts = filteredResults;
     [self.resultsTableController.tableView reloadData];
 }
-/*
-    func updateSearchResults(for searchController: UISearchController) {
-        // Update the filtered array based on the search text.
-        let searchResults = products
-        
-        // Strip out all the leading and trailing spaces.
-        let whitespaceCharacterSet = CharacterSet.whitespaces
-        let strippedString =
-        searchController.searchBar.text!.trimmingCharacters(in: whitespaceCharacterSet)
-        let searchItems = strippedString.components(separatedBy: " ") as [String]
-        
-        // Build all the "AND" expressions for each value in searchString.
-        let andMatchPredicates: [NSPredicate] = searchItems.map { searchString in
-            findMatches(searchString: searchString)
-        }
-        
-        // Match up the fields of the Product object.
-        let finalCompoundPredicate =
-        NSCompoundPredicate(andPredicateWithSubpredicates: andMatchPredicates)
-        
-        let filteredResults = searchResults.filter { finalCompoundPredicate.evaluate(with: $0) }
-        
-        // Apply the filtered results to the search results table.
-        if let resultsController = searchController.searchResultsController as? ResultsTableController {
-            resultsController.filteredProducts = filteredResults
-            resultsController.tableView.reloadData()
-        }
-    }
-    
-*/
 
 #pragma mark - UIStateRestoration
 -(void)encodeRestorableStateWithCoder:(NSCoder *)coder
